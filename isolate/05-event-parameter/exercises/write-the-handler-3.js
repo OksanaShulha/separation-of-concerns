@@ -29,3 +29,12 @@ const clickEvent2 = new Event('click');
 inputEl.dispatchEvent(clickEvent2);
 console.log('after 2nd click:', inputEl.cloneNode(true));
 console.assert(inputEl.checked === false, 'Test 2: after second click');
+
+/*
+const inputElBoolean = inputEl.checked;
+  const newInputElBoolean = !inputElBoolean;
+
+  console.log( typeof(inputElBoolean), '\t', inputElBoolean,'\t', 
+  typeof(newInputElBoolean), '\t', newInputElBoolean);
+  inputEl.setAttribute('checked', newInputElBoolean);
+*/

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; ///// DONE
 
 // fill in the _s
 
@@ -21,7 +21,7 @@ const loginHandler = () => {
 };
 
 // add the event listener to the button so a user can login
-_;
+buttonEl.addEventListener('click', loginHandler);
 
 
 // "click" the button once

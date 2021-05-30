@@ -23,3 +23,10 @@ console.assert(divEl.children[0].getAttribute('href') === '#top',
 console.assert(divEl.children[0].children[0].innerHTML === 'to the top',
   'Test: button innerHTML');
 
+/* const btn = divEl.children[0].children[0];
+btn.textContent = 'to the top';
+
+const href = divEl.children[0]; 
+console.log(href);
+href.removeAttribute('#toop');
+*/

@@ -11,8 +11,11 @@ console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
 
-
-
+ulEl.innerHTML = `
+  <li> toad </li>
+  <p>frog</p>
+  <li>salamander</li>
+`;
 
 
 // --- --- --- --- --- ---

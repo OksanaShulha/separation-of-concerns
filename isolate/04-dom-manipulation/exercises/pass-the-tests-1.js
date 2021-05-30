@@ -15,6 +15,23 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 //  append something to the end
 
 
+//const replacement = document.createElement();
+const preplace = document.createElement('nav');
+const old = divEl.querySelector('p');
+//first is new second is old
+divEl.replaceChild(preplace, old);
+
+const newDiv = document.createElement('h2');
+const section = divEl.querySelector ('section');
+divEl.insertBefore (newDiv, section);
+
+const removeTe = divEl.querySelector('h1');
+divEl.removeChild(removeTe);
+
+const create = document.createElement ('p');
+//const appendSome = divEl.querySelector('p');
+divEl.appendChild(create);
+
 
 // --- --- --- --- --- ---
 
@@ -31,3 +48,7 @@ console.assert(divEl.children[2].nodeName === 'SECTION',
   'Test: 3rd child');
 console.assert(divEl.children[3].nodeName === 'P',
   'Test: 4th child');
+
+
+
+

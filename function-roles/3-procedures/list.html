@@ -8,18 +8,18 @@
   <body>
     <div id="root">
       <input id="user-text" />
-      <ul id="list"></ul>
+      <ul id="list"></ul> 
     </div>
 
     <script id="procedures">
       debugger; // once when the procedures are declared
 
       const addListItem = text => {
-        const newListItemEl = document.createElement('li');
-        newListItemEl.innerText = `[x] ${text}`;
-        newListItemEl.addEventListener('click', handleRemoveItem);
+        const newListItemEl = document.createElement('li'); /// Create an element with li
+        newListItemEl.innerText = `[x] ${text}`; /// write text
+        newListItemEl.addEventListener('click', handleRemoveItem); /// if you click on it, it will be remoeved
 
-        document.getElementById('list').appendChild(newListItemEl);
+        document.getElementById('list').appendChild(newListItemEl); /// appendChild means in the end of child list (push)
       };
     </script>
 
@@ -30,8 +30,8 @@
         debugger; // each time a user clicks on a list item
         console.log('removing an item');
 
-        const listItem = event.target;
-        const list = listItem.parentElement;
+        const listItem = event.target; /// what write inside input'll be added to list
+        const list = listItem.parentElement; 
 
         list.removeChild(listItem);
       };
