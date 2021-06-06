@@ -11,7 +11,15 @@ console.log('initial input:', inputEl.cloneNode(true));
 
 const toggleCheckedHandler = (event) => {
   // write code to reverse the boolean .checked value on the target element
+  
+inputEl.checked = !inputEl.checked;
 
+// тоже как вариант решения
+//if (inputEl.checked == true) { // сравнени
+//inputEl.checked = false // ravno
+// } else {
+// inputEl.checked = true;
+// }
 
 };
 

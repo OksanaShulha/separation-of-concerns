@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; ///// DONE
 
 const divEl = document.createElement('ul');
 divEl.innerHTML = `
@@ -15,19 +15,23 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 //  append something to the end
 
 
+//  replace the <p>
 //const replacement = document.createElement();
 const preplace = document.createElement('nav');
 const old = divEl.querySelector('p');
 //first is new second is old
 divEl.replaceChild(preplace, old);
 
+//  insert something before the <section>
 const newDiv = document.createElement('h2');
 const section = divEl.querySelector ('section');
 divEl.insertBefore (newDiv, section);
 
+//  remove the <h1>
 const removeTe = divEl.querySelector('h1');
 divEl.removeChild(removeTe);
 
+//  append something to the end
 const create = document.createElement ('p');
 //const appendSome = divEl.querySelector('p');
 divEl.appendChild(create);

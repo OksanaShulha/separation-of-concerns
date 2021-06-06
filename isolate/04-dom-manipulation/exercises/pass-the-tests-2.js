@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; ///// DONE
 
 const ulEl = document.createElement('ul');
 ulEl.innerHTML = `
@@ -11,11 +11,17 @@ console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
 
-ulEl.innerHTML = `
-  <li> toad </li>
-  <p>frog</p>
-  <li>salamander</li>
-`;
+const removeFish = ulEl.querySelector('li');
+ulEl.removeChild(removeFish);
+
+const preplace = document.createElement('li');
+const old = ulEl.querySelector('p');
+//first is new second is old
+ulEl.replaceChild(preplace, old);
+
+ulEl.children[0].innerHTML = 'toad';
+ulEl.children[1].innerHTML = 'frog';
+ulEl.children[2].innerHTML = 'salamander';
 
 
 // --- --- --- --- --- ---
