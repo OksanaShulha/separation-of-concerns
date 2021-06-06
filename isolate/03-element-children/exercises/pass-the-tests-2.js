@@ -10,8 +10,10 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 
-
-
+// divEl.children[0].setAttribute('href', '#top'); as an option  (second parameter is a value what we want to add to our attribute)
+divEl.children[0].href = '#top';
+divEl.children[0].children[0].innerHTML = 'to the top';
+// divEl.children[0].children[0].setAttribute('id', 'button'); as an option (second parameter is a value what we want to add to our attribute)
 
 // --- --- --- --- --- ---
 
