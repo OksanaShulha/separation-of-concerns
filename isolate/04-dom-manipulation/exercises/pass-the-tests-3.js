@@ -15,8 +15,31 @@ console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
 // --- write some code ---
 
-
-
+divEl.innerHTML = `
+  <table>
+    <tbody>
+      <tr>
+        <td>
+        \n
+        </td>
+        <td>
+        \n
+        </td>
+      </tr>
+      <tr>
+        <td>
+        \n
+        </td>
+        <td>
+        \n
+        </td>
+      </tr>
+    </tbody>
+  </table>
+`;divEl.children[0].children[0].children[0].children[0].innerHTML = 'a';
+divEl.children[0].children[0].children[0].children[1].innerHTML = 'b';
+divEl.children[0].children[0].children[1].children[0].innerHTML = 'c';
+divEl.children[0].children[0].children[1].children[1].innerHTML = 'd';
 
 // --- --- --- --- --- ---
 
