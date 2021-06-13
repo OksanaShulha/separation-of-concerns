@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--DONE-->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -113,7 +113,6 @@
             <td><button>X</button></td>
             <td><button>X</button></td>
             <td><button>X</button></td>
-            <td><button>X</button></td>
           </tr>
           <tr>
             <td><button>X</button></td>
@@ -140,7 +139,7 @@
             <td><button>X</button></td>
           </tr>
         </tbody>
-      </table>
+  </table>
     </main>
 
     <script id="handlers">
@@ -148,14 +147,14 @@
         debugger;
 
         const target = event.target;
-        if (target.nodeName !== '_') {
+        if (target.nodeName !== 'BUTTON') {
           return;
         }
 
-        if (event.type === '_') {
+        if (event.type === 'focusin') {
           target.style.backgroundColor = 'black';
           target.style.color = 'white';
-        } else if (event.type === '_') {
+        } else if (event.type === 'focusout') {
           target.style.backgroundColor = 'white';
           target.style.color = 'black';
         }
@@ -163,16 +162,17 @@
     </script>
 
     <script id="listeners">
-      // this works! no need to change it
+      // this works! no need to change it hhg
       document
         .getElementById('the-board')
-        .addEventListener('focusin', toggleColorHandler);
+        .addEventListener('focusin', toggleColorHandler); /// focusin type of event
 
       document
         .getElementById('the-board')
         .addEventListener('focusout', toggleColorHandler);
 
       // trick question: why would 'blur' and 'focus' not work?
+      ///// 'blur' and 'focus' we can make only! for each element (it is not bubbling), bubbling are focusin & focusout, which trigger all elements
       //  https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event
       //  https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event
     </script>

@@ -10,6 +10,7 @@
       <ul id="list">
         <li><button>X</button><input value="start coding" /></li>
         <li><button>X</button><input value="stop coding" /></li>
+        <!-- we want to insert a new line  --->
         <li><button id="add-todo-button">+</button></li>
       </ul>
     </main>
@@ -17,35 +18,35 @@
     <script id="handlers">
       const deleteTodoHandler = event => {
         debugger;
-        const target = _;
-        if (target._ === 'BUTTON' && target._ === 'X') {
-          const liToRemove = _.parentElement;
-          const todoList = document.getElementById(_);
-          todoList._(liToRemove);
+        const target = event.target;
+        if (target.nodeName === 'BUTTON' && target.innerHTML === 'X') {
+          const liToRemove = target.parentElement;
+          const todoList = document.getElementById('list'); // we select whole list just to make shure that we can delete any item from this list
+          todoList.removeChild(liToRemove);
         }
       };
 
       const addTodoHandler = event => {
         debugger;
 
-        const newLi = document.createElement(_);
-        const newButton = document.createElement(_);
-        newButton.innerHTML = '_';
+        const newLi = document.createElement('li');
+        const newButton = document.createElement('button');
+        newButton.innerHTML = 'X';
         newLi.appendChild(newButton);
-        const newInput = document.createElement(_);
-        newLi.appendChild(newInput);
+        const newInput = document.createElement('input');
+        newLi.appendChild(newInput); // adding to our list item
 
-        const addButton = event._;
-        const addButtonParent = addButton._;
-        const todoList = addButtonParent._;
-        todoList.insertBefore(_, _);
+        const addButton = event.target;
+        const addButtonParent = addButton.parentElement;
+        const todoList = addButtonParent.parentElement;
+        todoList.insertBefore(newLi, addButtonParent);
       };
     </script>
 
     <script id=" listeners">
-      document.getElementById(_).addEventListener('click', _);
+      document.getElementById('list').addEventListener('click', deleteTodoHandler);
 
-      document.getElementById(_).addEventListener('click', _);
+      document.getElementById('add-todo-button').addEventListener('click', addTodoHandler);
     </script>
   </body>
 </html>
