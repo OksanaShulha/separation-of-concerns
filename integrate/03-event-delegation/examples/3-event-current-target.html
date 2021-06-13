@@ -53,9 +53,9 @@
         debugger;
 
         const eventType = event.type;
-        const eventTarget = event.target;
+        const eventTarget = event.target; // in which element appear
 
-        const currentTarget = event.currentTarget;
+        const currentTarget = event.currentTarget; // in whicj eventlistener is added
 
         const composedPath = event.composedPath();
         const pathListItems = composedPath.map((el, index) => {

@@ -13,11 +13,8 @@ const target = event.target;
 const innerText = event.target.innerHTML;
 let reverseText = '';
 console.log(innerText);
-<<<<<<< HEAD
-for (let i = innerText.length - 1; i >= 0; i--) {
-=======
+
 for ( let i = innerText.length - 1; i >= 0; i--) {
->>>>>>> 40279ae6f78ae11580c9fc45bc23e255025a161e
 reverseText += innerText[i];
 }
 console.log(reverseText);
