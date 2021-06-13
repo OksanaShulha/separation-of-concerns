@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!DOCTYPE html>  ///// Almost DONE check links
+=======
+<!DOCTYPE html> ///// DONE
+>>>>>>> 61e072dd6fa4c0b9419beea4978130306f899a36
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -63,7 +67,11 @@
         const isACheater = confirm('are you sure you want to cheat?');
 
         if (isACheater) {
+<<<<<<< HEAD
           alert(`the secret is:`);
+=======
+          alert(`the secret is: \n ${secret}`);
+>>>>>>> 61e072dd6fa4c0b9419beea4978130306f899a36
         } else {
           alert('good choice :)');
         }
@@ -74,11 +82,19 @@
       // https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
       // https://stackoverflow.com/questions/7338193/using-chrome-how-to-find-to-which-events-are-bound-to-an-element
 
+<<<<<<< HEAD
       document.setSecretButton.addEvenListener('click', setSecretHandler);
 
       document.guessSecretButton.addEvenListener('click', guessSecretHandler);
 
       document.cheatSecretButton.addEvenListener('click', cheatHandler);
+=======
+      document.getElementById('set').addEventListener('click', setSecretHandler);
+
+      document.getElementById('guess').addEventListener('click', guessSecretHandler);
+
+      document.getElementById('cheat').addEventListener('click', cheatHandler);
+>>>>>>> 61e072dd6fa4c0b9419beea4978130306f899a36
     </script>
   </body>
 </html>

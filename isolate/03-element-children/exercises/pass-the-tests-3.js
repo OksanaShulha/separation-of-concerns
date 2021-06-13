@@ -24,8 +24,11 @@ divEl.children[0].children[0].children[0].children[0].innerHTML = 'a';
 divEl.children[0].children[0].children[0].children[1].innerHTML = 'b';
 divEl.children[0].children[0].children[1].children[0].innerHTML = 'c';
 divEl.children[0].children[0].children[1].children[1].innerHTML = 'd';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 61e072dd6fa4c0b9419beea4978130306f899a36
 
 // --- --- --- --- --- ---
 

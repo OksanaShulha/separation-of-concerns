@@ -18,11 +18,17 @@ const preplace = document.createElement('li');
 const old = ulEl.querySelector('p');
 //first is new second is old
 ulEl.replaceChild(preplace, old);
+<<<<<<< HEAD
 
 ulEl.children[0].innerHTML = 'toad';
 ulEl.children[1].innerHTML = 'frog';
 ulEl.children[2].innerHTML = 'salamander';
+=======
+>>>>>>> 61e072dd6fa4c0b9419beea4978130306f899a36
 
+ulEl.children[0].innerHTML = 'toad';
+ulEl.children[1].innerHTML = 'frog';
+ulEl.children[2].innerHTML = 'salamander';
 
 // --- --- --- --- --- ---
 
